@@ -1,0 +1,44 @@
+{
+	"name": "regionalusweekly",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "csvs"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Position",
+				"type": "String"
+			},
+			{
+				"name": "Track Name",
+				"type": "String"
+			},
+			{
+				"name": "Artist",
+				"type": "String"
+			},
+			{
+				"name": "Streams",
+				"type": "String"
+			},
+			{
+				"name": "URL",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
