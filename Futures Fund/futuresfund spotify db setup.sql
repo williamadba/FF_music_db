@@ -8,6 +8,7 @@ alter role db_owner add member importprocess
 CREATE user student for login  student
 DENY select, insert, update, delete on raw to student
 DENY select, insert, update, delete on rawimport to student
+GRANT select  on flatdata to student
 GRANT select, insert, update, delete on artist to student
 GRANT select, insert, update, delete on chart to student
 GRANT select, insert, update, delete on track to student
