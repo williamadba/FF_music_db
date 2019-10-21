@@ -95,3 +95,25 @@ inner join (select artist = '%'+artist+'%' from rawimport) x
 on r.Track like x.artist 
 group by r.artist, Track, x.Artist
 order by Track, x.Artist
+
+
+/*
+INSERT INTO artist (name)
+SELECT 'Metallica'
+*/
+select id, name 
+from artist
+order by id
+
+/*
+insert into track (name, url, artistid) 
+select 'Enter Sandman', NULL, 127
+*/
+
+select * from track 
+order by id asc
+
+-- insert into chart (rank, streams, artistid, trackid)
+-- select 1000, 999999999999, 127, 254
+
+select * from chart order by id
